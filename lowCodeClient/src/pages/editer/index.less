@@ -1,0 +1,106 @@
+
+#root {
+    height: 100vh;
+    background: #fff;
+    .container {
+        height: 100%;
+    }
+    .header {
+       background: @primary-bg-blue;
+    }
+    .content {
+        height: 100%;
+        position: relative;
+        overflow: hidden;
+        .editCanvasWrapper {
+            min-height: 100%;
+            position: relative;
+            z-index: 1;
+        }
+        .left {
+            position: absolute;
+            height: 100%;
+            width: 200px;
+            left: 0;
+            top: 0;
+            padding-top: 10px;
+        }
+        .right {
+            position: absolute;
+            height: 100%;
+            width: 262px;
+            right: 0;
+            top: 0;
+        }
+    }
+    .placeholder {
+        text-align: center;
+        color: #333;
+    }
+}
+
+.navBar {
+    display: flex;
+}
+
+.leftSider {
+    position: relative;
+    box-shadow: 5px 0 5px #b4b4b4;
+    .leftCollapsedIcon {
+        position: absolute;
+        z-index: 9999;
+        top: 48%;
+        right: -25px;
+        width: 25px;
+        display: block;
+        color:@font-color-white;
+        text-align: center;
+        font-size: 20px;
+        line-height: 80px;
+        background: @primary-bg-blue;
+        cursor:pointer;
+    }
+}
+#editer{
+    position: relative;
+    z-index: 1;
+}
+.watermaker {
+    position: absolute;
+    top: 35%;
+    left: 10%;
+    z-index: 0;
+    transform: rotateZ(-45deg);
+    color: #cf6c6c;
+    font-size: 150px;
+    font-weight: 100;
+}
+.rightSider { 
+    position: relative;
+    box-shadow: -5px 0 5px #b4b4b4;
+    .rightCollapsedIcon {
+        cursor:pointer;
+        display: block;
+        color:@font-color-white;
+        text-align: center;
+        width: 25px;
+        font-size: 20px;
+        background: @primary-bg-blue;
+        line-height: 80px;
+        top: 48%;
+        left: -25px;
+        position: absolute;
+    }
+}
+
+.content-wrapper {
+    display: flex;
+    flex-direction: row;
+}
+
+.ant-layout-sider {
+    background: @primary-bg-white;
+    max-width: 300px !important;
+    min-width: 0px !important;
+    flex: 0 0 300px;
+}

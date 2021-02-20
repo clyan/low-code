@@ -1,0 +1,91 @@
+
+#root {
+    height: 100vh;
+    background: #fff;
+    .container {
+        height: 100%;
+    }
+    .header {
+       background: @primary-bg-blue;
+    }
+    .content {
+        height: 100%;
+        position: relative;
+        padding: 40px;
+        .left {
+            position: absolute;
+            height: 100%;
+            width: 200px;
+            left: 0;
+            top: 0;
+            padding-top: 10px;
+        }
+        .right {
+            position: absolute;
+            height: 100%;
+            width: 262px;
+            right: 0;
+            top: 0;
+        }
+        .center {
+            margin-left: 200px;
+            margin-right: 262px;
+            background: #f5f5f5;
+            height: 100%;
+            overflow: auto;
+            padding: 20px;
+            .content {
+                height: 100%;
+                overflow: auto;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+        }
+    }
+    .placeholder {
+        text-align: center;
+        color: #333;
+    }
+}
+.navBar {
+    display: flex;
+}
+
+.leftSider {
+    &.ant-layout-sider {
+        position: relative;
+        &::before {
+            content: '>';
+            display: block;
+            color:@font-color-white;
+            text-align: center;
+            font-size: 20px;
+            background: @primary-bg-blue;
+            line-height: 60px;
+            top: 48%;
+            right: -16px;
+            border-top-right-radius: 2px;
+            border-bottom-right-radius: 2px;
+            position: absolute;
+        }
+    }
+}
+.rightSider {
+    &.ant-layout-sider {
+        position: relative;
+        &::before {
+            content: '<';
+            cursor:pointer;
+            display: block;
+            color:@font-color-white;
+            text-align: center;
+            font-size: 20px;
+            background: @primary-bg-blue;
+            line-height: 60px;
+            top: 48%;
+            left: -16px;
+            position: absolute;
+        }
+    }
+}
